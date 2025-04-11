@@ -4,7 +4,7 @@
 
 ### (1) Generation Task
 
-"""Input: [five-shot examples] + Infer the date from context\n\nQuestion: Yesterday was April 30, 2021. What is the date tomorrow in MM/DD/YYYY?\n
+"""Input: [five-shot examples] + Infer the date from context\n\nQuestion: Yesterday was April 30, 2021. What is the date tomorrow in MM/DD/YYYY?\nAnswer:\n
 Output: 05/02/2021"""
 
 ### (2) Self-Evaluation Task (We use the probability of token "A" as a proxy for the correctness of the model's generated answer.)

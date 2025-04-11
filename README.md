@@ -1,10 +1,26 @@
 # Self-Alignment for Factuality
 
-To implement **Self-Knowledge Tuning (SK-Tuning)**, we utilize the **Direct Preference Optimization (DPO)** algorithm to **stabilize** the training process and enhance an LLM's self-knowledge awareness. To support the research community, we have provided pre-training data, which is publicly available at the following link:  
+## 1. Training Data Format Examples
+
+### (1) Generation Task
+
+"""Input: [five-shot examples] + Infer the date from context\n\nQuestion: Yesterday was April 30, 2021. What is the date tomorrow in MM/DD/YYYY?
+Output: 05/02/2021"""
+
+### (2) Self-Evaluation Task (We use the probability of token "A" as a proxy for the correctness of the model's generated answer.)
+
+"""Input: [five-shot examples] +  Name geometric shapes from their SVG paths\n\nQuestion: This SVG path element <path d=\"M 53.64,29.71 L 61.55,33.55 M 61.55,33.55 L 65.49,42.75 M 65.49,42.75 L 60.75,49.85 M 60.75,49.85 L 54.92,52.75 L 48.80,50.52 M 48.80,50.52 L 44.97,43.03 M 44.97,43.03 L 46.15,33.55 M 46.15,33.55 L 53.64,29.71\"/> draws a \nProposed Answer: octagon\nIs the proposed answer:\n A. True\n B. False\nThe proposed answer is:
+Output: A"
+
+## 2. Self-Knowledge Tuning (SK-Tuning)
+
+To implement **Self-Knowledge Tuning (SK-Tuning)**, we utilize the **Direct Preference Optimization (DPO)** algorithm to **stabilize** the training process and enhance an LLM's self-knowledge awareness. To support the research community, we have provided pre-training data (the split based on the Bigbench dataset), which is publicly available at the following link:  
 
 🔗 [Pre-Training Data](https://drive.google.com/file/d/1B18Aax0hAXPUhKmHtOmn1r9JdJYY2XzN/view?usp=sharing)  
 
+
 If you find our dataset useful, please cite our work using the following reference:  
+
 
 ```bibtex
 @inproceedings{zhang-etal-2024-self,

@@ -18,6 +18,8 @@ Training with Direct Preference Optimization (DPO) algorithm.
 
 (we incorporate SELF-EVAL, a self-evaluation component, to prompt an LLM to validate the factuality of its own generated responses solely based on its internal knowledge. We use the probability of token "A" as a proxy for the correctness of the model's generated answer.)
 
+Training with Direct Preference Optimization (DPO) algorithm.
+
 ```json
 {
   "prompt": "Infer the date from context\n\nQuestion: Yesterday was April 30, 2021. What is the date tomorrow in MM/DD/YYYY?\nProposed Answer: 05/02/2021\nIs the proposed answer:\n A. True\n B. False\nThe proposed answer is:\n",

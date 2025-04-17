@@ -20,7 +20,7 @@
 ```json
 {
   "prompt": "Question: What is Westlife's first album?\nProposed Answer: Westlife is the debut studio album by Irish boy band Westlife.\nIs the proposed answer:\n A. True\n B. False\nThe proposed answer is:\n",
-  "Output": "A"
+  "response": "A"
 }
 ```
 

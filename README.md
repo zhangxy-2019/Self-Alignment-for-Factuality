@@ -14,7 +14,7 @@ Training with Direct Preference Optimization (DPO) algorithm.
 }
 ```
 
-### (2) Self-Evaluation Task 
+### (2) Self-Evaluation (Self-Verification) Task 
 
 (we incorporate SELF-EVAL, a self-evaluation component, to prompt an LLM to validate the factuality of its own generated responses solely based on its internal knowledge. We use the probability of token "A" as a proxy for the correctness of the model's generated answer.)
 

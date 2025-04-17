@@ -4,7 +4,7 @@
 
 ### (1) Generation Task 
 
-(We prompt an LLM to generate candidate responses via multiple sampling.)
+(Given a question, we prompt an LLM to generate candidate responses via multiple sampling.)
 
 ```json
 {

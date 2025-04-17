@@ -2,12 +2,15 @@
 
 ## 1. Training Data Format Examples
 
-### (1) Generation Task
+### (1) Generation Task 
+
+Training with Direct Preference Optimization (DPO) algorithm.
 
 ```json
 {
-  "Input": "[five-shot examples] + Infer the date from context\n\nQuestion: Yesterday was April 30, 2021. What is the date tomorrow in MM/DD/YYYY?\nAnswer:\n",
-  "Output": "05/02/2021"
+  "prompt": "[five-shot examples] + Infer the date from context\n\nQuestion: Yesterday was April 30, 2021. What is the date tomorrow in MM/DD/YYYY?\nAnswer:\n",
+  "chosen": "05/02/2021",
+  "rejected": "05/02/2020"
 }
 ```
 
@@ -17,8 +20,9 @@
 
 ```json
 {
-  "Input": "Infer the date from context\n\nQuestion: Yesterday was April 30, 2021. What is the date tomorrow in MM/DD/YYYY?\nProposed Answer: 05/02/2021\nIs the proposed answer:\n A. True\n B. False\nThe proposed answer is:\n",
-  "Output": "A"
+  "prompt": "Infer the date from context\n\nQuestion: Yesterday was April 30, 2021. What is the date tomorrow in MM/DD/YYYY?\nProposed Answer: 05/02/2021\nIs the proposed answer:\n A. True\n B. False\nThe proposed answer is:\n",
+  "chosen": "A",
+  "rejected": "B"
 }
 ```
 

@@ -17,7 +17,7 @@
 
 ```json
 {
-  "Input": "[five-shot examples] + Infer the date from context\n\nQuestion: Yesterday was April 30, 2021. What is the date tomorrow in MM/DD/YYYY?\nProposed Answer: 05/02/2021\nIs the proposed answer:\n A. True\n B. False\nThe proposed answer is:\n",
+  "Input": "Infer the date from context\n\nQuestion: Yesterday was April 30, 2021. What is the date tomorrow in MM/DD/YYYY?\nProposed Answer: 05/02/2021\nIs the proposed answer:\n A. True\n B. False\nThe proposed answer is:\n",
   "Output": "A"
 }
 ```

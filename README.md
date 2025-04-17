@@ -1,4 +1,5 @@
-# Self-Alignment for Factuality
+# Self-Alignment for Factuality: Mitigating Hallucinations in LLMs via Self-Evaluation
+<https://aclanthology.org/2024.acl-long.107/>
 
 ## 1. Data Format Examples
 

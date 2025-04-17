@@ -1,22 +1,35 @@
 # Self-Alignment for Factuality
 
-## 1. Training Data Format Examples
+## 1. Data Format Examples
 
 ### (1) Generation Task 
 
-Training with Direct Preference Optimization (DPO) algorithm.
+(We prompt an LLM to generate candidate responses via multiple sampling.)
 
 ```json
 {
-  "prompt": "[five-shot examples] + Infer the date from context\n\nQuestion: Yesterday was April 30, 2021. What is the date tomorrow in MM/DD/YYYY?\nAnswer:\n",
-  "chosen": "05/02/2021",
-  "rejected": "05/02/2020"
+  "prompt": "[five-shot examples]\n\nQuestion: What is Westlife's first album?\nAnswer:",
+  "response": "Westlife is the debut studio album by Irish boy band Westlife."
 }
 ```
 
-### (2) Self-Evaluation (Self-Verification) Task 
+### (2) Self-Evaluation (Self-Verification) Task
 
 (we incorporate SELF-EVAL, a self-evaluation component, to prompt an LLM to validate the factuality of its own generated responses solely based on its internal knowledge. We use the probability of token "A" as a proxy for the correctness of the model's generated answer.)
+
+```json
+{
+  "prompt": "Question: What is Westlife's first album?\nProposed Answer: Westlife is the debut studio album by Irish boy band Westlife.\nIs the proposed answer:\n A. True\n B. False\nThe proposed answer is:\n",
+  "Output": "A"
+}
+```
+
+## 2. Self-Knowledge Tuning (SK-Tuning)
+
+To implement **Self-Knowledge Tuning (SK-Tuning)**, we utilize the **Direct Preference Optimization (DPO)** algorithm to **stabilize** the training process and enhance an LLM's self-knowledge awareness. To support the research community, we have provided pre-training data (the split based on the Bigbench dataset), which is publicly available at the following link:  
+
+🔗 [Pre-Training Data](https://drive.google.com/file/d/1B18Aax0hAXPUhKmHtOmn1r9JdJYY2XzN/view?usp=sharing)  
+
 
 Training with Direct Preference Optimization (DPO) algorithm.
 
@@ -27,13 +40,6 @@ Training with Direct Preference Optimization (DPO) algorithm.
   "rejected": "B"
 }
 ```
-
-## 2. Self-Knowledge Tuning (SK-Tuning)
-
-To implement **Self-Knowledge Tuning (SK-Tuning)**, we utilize the **Direct Preference Optimization (DPO)** algorithm to **stabilize** the training process and enhance an LLM's self-knowledge awareness. To support the research community, we have provided pre-training data (the split based on the Bigbench dataset), which is publicly available at the following link:  
-
-🔗 [Pre-Training Data](https://drive.google.com/file/d/1B18Aax0hAXPUhKmHtOmn1r9JdJYY2XzN/view?usp=sharing)  
-
 
 If you find our dataset useful, please cite our work using the following reference:  
 

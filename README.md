@@ -42,7 +42,7 @@ Training with Direct Preference Optimization (DPO) algorithm.
 }
 ```
 
-If you find our dataset useful, please cite our work using the following reference:  
+If you find our data and code useful, please cite our work using the following reference:  
 
 
 ```bibtex

@@ -1,6 +1,9 @@
 # Self-Alignment for Factuality: Mitigating Hallucinations in LLMs via Self-Evaluation
 <https://aclanthology.org/2024.acl-long.107/>
 
+We are pleased to release the pre-training data and training code for public use.  
+The evaluation protocol will be made available shortly—stay tuned!
+
 ## 1. Data Format Examples
 
 ### (1) Generation Task 

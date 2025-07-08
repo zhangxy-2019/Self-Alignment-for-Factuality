@@ -1,8 +1,10 @@
 # Self-Alignment for Factuality: Mitigating Hallucinations in LLMs via Self-Evaluation
-<https://aclanthology.org/2024.acl-long.107/>
 
-We are pleased to release the pre-training data and training code for public use.  
-The evaluation protocol will be made available shortly—stay tuned!
+This repository supports the research paper: [Self-Alignment for Factuality: Mitigating Hallucinations in LLMs via Self-Evaluation](https://aclanthology.org/2024.acl-long.107/).
+
+We have uploaded the training and test data for the **generation task** and **self-evaluation task** on Hugging Face: [Dataset Link](https://huggingface.co/datasets/xyingzhang/self-alignment-for-factuality/tree/main).
+
+We are currently organizing all relevant code and will upload it soon.
 
 ## 1. Data Format Examples
 
